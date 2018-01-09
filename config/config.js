@@ -1,0 +1,1 @@
+module.exports.SEED = '@clave-@secreta-@de-@encriptacion'
