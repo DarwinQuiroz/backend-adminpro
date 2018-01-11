@@ -24,8 +24,12 @@ const UsuarioSchema = new Schema({
         type: String,
         default: 'USER_ROL',
         enum: { values: ['USER_ADMIN', 'USER_ROL'], message: "El rol no es válido." }
+    },
+    google: {
+        type: Boolean,
+        default: false
     }
 })
 
-UsuarioSchema.plugin(uniqueValidator, {message: '{PATH} ya está en uso, por favor elige otro.'})
+UsuarioSchema.plugin(uniqueValidator, { message: '{PATH} ya está en uso, por favor elige otro.' })
 module.exports = mongoose.model('Usuario', UsuarioSchema)
